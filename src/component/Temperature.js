@@ -4,26 +4,19 @@ import PropTypes from 'prop-types';
 import { useState } from 'react'
 
 const Temperature = () => {
-    const [tempCount, tempSet] = useState(70);
+    const [tempCount, tempSet] = useState(72);
 
     const tempIncrease = () => {
-        if (tempCount < 75) {
-            tempSet(tempCount + 1);
-        }else {
-            alert('It is hot outside.')
-        }
+        if (tempCount > 75) 
+        alert('It is hot outside.')
+        tempSet(tempCount + 1); 
     };
 
     const tempDecrease = () => {
-        if (tempCount > 32) {
-            tempSet(tempCount - 1);
-            
-        }else {
+        if (tempCount < 32) 
             alert('It is Freezing temperature!')
-        }
+            tempSet(tempCount - 1);
     };
-
-    
 
     // const backgroundColor = () => {
     //     if (tempCount > 80) {
