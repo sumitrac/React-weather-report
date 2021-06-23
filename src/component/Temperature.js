@@ -5,30 +5,34 @@ import { useState } from 'react'
 
 const Temperature = () => {
     const [tempCount, tempSet] = useState(72);
+    // const [tempColor, setTempColor] =useState('')
 
     const tempIncrease = () => {
         if (tempCount > 75) 
         alert('It is hot outside.')
         tempSet(tempCount + 1); 
+        // backgroundColor()
+
     };
 
     const tempDecrease = () => {
         if (tempCount < 32) 
             alert('It is Freezing temperature!')
             tempSet(tempCount - 1);
+            // setTempColor(backgroundColor())
     };
 
     // const backgroundColor = () => {
     //     if (tempCount > 80) {
-    //         color = red;
+    //         return 'red';
     //     }else if (tempCount > 70) {
-    //         color =orange; 
+    //         return 'orange'; 
     //     }else if (tempCount > 60) {
-    //         color =yellow;
-    //     }else if (temCount > 50) {
-    //         color=green;
+    //         return 'yellow';
+    //     }else if (tempCount > 50) {
+    //         return 'green';
     //     }else {
-    //         color=teal; 
+    //         return 'teal'; 
     //     };
     // };
 
